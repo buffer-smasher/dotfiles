@@ -26,5 +26,7 @@
 !.config/picom/*
 !.config/polybar
 !.config/polybar/*
+!.config/polybar/scripts
+!.config/polybar/scripts/*
 !.config/rofi
 !.config/rofi/*

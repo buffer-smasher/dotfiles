@@ -8,9 +8,10 @@ wallpaper=$(shuf -e -n1 ~/Pictures/Backgrounds/aenami/*)
 feh --bg-scale $wallpaper
 wal -i $wallpaper
 
+### BORDERS ###
+${HOME}/.config/i3/border.sh &
+
 ### RGB ###
 source "${HOME}/.cache/wal/colors.sh"
 openrgb --mode direct -c ${color4:1}
-
-### BORDERS ###
-${HOME}/.config/i3/border.sh
+openrgb -d 3 --mode static -c ${color4:1}
