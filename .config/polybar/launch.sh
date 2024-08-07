@@ -10,4 +10,4 @@ foreground=$color7
 tertiary=$color2
 fourth=$color4
 
-polybar main &
+polybar -r main &

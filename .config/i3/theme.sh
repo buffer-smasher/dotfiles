@@ -2,7 +2,7 @@
 
 ### WALLPAPER ###
 # single image or cycle folder
-wallpaper="$HOME/Pictures/Backgrounds/aenami/alena-aenami-far-from-tomorrow-1080px.jpg"
+wallpaper="$HOME/Pictures/Backgrounds/aenami/alena-aenami-rooflinesgirl-1k-2.jpg"
 #wallpaper=$(shuf -e -n1 ~/Pictures/Backgrounds/aenami/*)
 
 feh --bg-scale $wallpaper

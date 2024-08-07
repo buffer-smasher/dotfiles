@@ -6,8 +6,10 @@
 
 !.config
 
-!.config/alacritty
-!.config/alacritty/*
+!.config/kitty
+!.config/kitty/*
+!.config/kitty/themes
+!.config/kitty/themes/*
 
 !.config/cava
 !.config/cava/*

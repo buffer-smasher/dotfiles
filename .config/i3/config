@@ -31,10 +31,6 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id /home/drew/.config/i3/volume-change.sh -u &
 bindsym XF86AudioLowerVolume exec --no-startup-id /home/drew/.config/i3/volume-change.sh -d &
@@ -96,8 +92,8 @@ bindsym $mod+bracketright split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
+bindsym $mod+s layout stacking
 bindsym $mod+x layout toggle split
 
 # toggle tiling / floating
@@ -190,17 +186,16 @@ bindsym $mod+Ctrl+Shift+Down resize shrink height 10 px or 10 ppt
 bindsym $mod+e exec --no-startup-id thunar
 bindsym $mod+b exec --no-startup-id firefox
 bindsym XF86Tools exec --no-startup-id spotify-launcher
-bindsym $mod+z exec --no-startup-id code
 
 # autostart
 exec_always --no-startup-id ~/.config/i3/startup.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
 exec --no-startup-id discord --start-minimized
 exec --no-startup-id syncthing
 exec --no-startup-id greenclip daemon
 exec --no-startup-id xbindkeys
 exec --no-startup-id solaar
 exec --no-startup-id wal -R
-exec --no-startup-id setxkbmap -option caps:escape
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id dunst
