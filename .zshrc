@@ -42,7 +42,7 @@ export EDITOR='nvim'
 
 alias i3edit='$EDITOR ~/.config/i3/config'
 alias connect-hd350='bluetoothctl connect 00:1B:66:EA:AC:99'
-alias server='ssh svr@192.168.1.69'
+alias server='ssh guest@192.168.1.69'
 alias clear-clipboard='pkill greenclip && greenclip clear && greenclip daemon &'
 alias sddm-wallpaper='sudo nano /usr/share/sddm/themes/breeze/theme.conf.user'
 alias histgrep='history | grep'
@@ -51,6 +51,10 @@ alias vim='nvim'
 alias psgrep='ps -e | grep'
 alias brightness='ddcutil setvcp 10'
 alias startvnc='sudo systemctl start vncserver@:3'
+alias journal='cd ~/syncthing/journal/2024/'
+alias nap='openrgb --mode direct -c 000000; systemctl suspend'
+alias swapcaps='setxkbmap -option && setxkbmap -option caps:none && setxkbmap -option caps:swapnone'
+alias guitar='pactl load-module module-loopback latency_msec=1'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -63,3 +67,14 @@ alias startvnc='sudo systemctl start vncserver@:3'
 export CC="clang"
 export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
 export LDLIBS="-lcrypt -lcs50 -lm"
+
+# fixes Satisfactory Mod Manager
+export WEBKIT_DISABLE_DMABUF_RENDERER=1
+
+# miniconda
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+
+export PATH=$PATH:/home/drew/.spicetify
+
+export MANPAGER='nvim +Man!'
