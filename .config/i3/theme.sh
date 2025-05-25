@@ -2,8 +2,8 @@
 
 ### WALLPAPER ###
 # single image or cycle folder
-# wallpaper="$HOME/Pictures/Backgrounds/aenami/alena-aenami-rooflinesgirl-1k-2.jpg"
-wallpaper=$(shuf -e -n1 /home/drew/Pictures/Backgrounds/aenami/*)
+wallpaper="$HOME/Pictures/wallpapers/desktop/artists/AlenaAenamai/alena-aenami-away-1k.jpg"
+# wallpaper=$(shuf -e -n1 /home/drew/Pictures/wallpapers/desktop/artists/AlenaAenamai/*)
 
 feh --bg-scale $wallpaper
 wal -i $wallpaper

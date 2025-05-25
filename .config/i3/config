@@ -157,7 +157,7 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id dunst
 exec --no-startup-id lxpolkit
-exec --no-startup-id discord --start-minimized
+# exec --no-startup-id discord --start-minimized
 
 # wallpaper, rgb
 exec_always --no-startup-id ~/.config/i3/theme.sh
@@ -199,3 +199,7 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+Shift+r mode "default"
 }
+
+# should fix greenclip
+exec --no-startup-id greenclip daemon>/dev/null
+bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboad
