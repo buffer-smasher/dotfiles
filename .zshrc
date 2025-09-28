@@ -55,6 +55,7 @@ alias journal='cd ~/syncthing/journal/2025/'
 alias nap='openrgb --mode direct -c 000000; systemctl suspend'
 alias swapcaps='setxkbmap -option && setxkbmap -option caps:none && setxkbmap -option caps:swapnone'
 alias guitar='pactl load-module module-loopback latency_msec=1'
+alias esp-idf='source /home/drew/esp-idf/export.sh'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -78,3 +79,5 @@ export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 export PATH=$PATH:/home/drew/.spicetify
 
 export MANPAGER='nvim +Man!'
+
+export CM_LAUNCHER=rofi

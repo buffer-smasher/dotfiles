@@ -16,9 +16,6 @@ function Plugin.config()
 	vim.api.nvim_create_autocmd("LspAttach", {
 		group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 		callback = function(event)
-			-- NOTE: Remember that Lua is a real programming language, and as such it is possible
-			-- to define small helper and utility functions so you don't have to repeat yourself.
-			--
 			local map = function(keys, func, desc)
 				vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 			end
@@ -175,6 +172,13 @@ function Plugin.config()
 				server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 				require("lspconfig")[server_name].setup(server)
 			end,
+		},
+	})
+
+	vim.lsp.config("clangd", {
+		cmd = {
+			"clangd",
+			"--fallback-style=webkit",
 		},
 	})
 end
