@@ -2,7 +2,7 @@
 
 ### WALLPAPER ###
 # single image or cycle folder
-wallpaper="$HOME/Pictures/wallpapers/desktop/artists/AlenaAenamai/peakpx.jpg"
+wallpaper="$HOME/Pictures/wallpapers/desktop/4k/fallout-4-3840x2160-24489.jpg"
 # wallpaper=$(shuf -e -n1 /home/drew/Pictures/wallpapers/desktop/artists/AlenaAenamai/*)
 
 feh --bg-scale $wallpaper

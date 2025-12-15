@@ -9,6 +9,10 @@ exec --no-startup-id dex --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
+# fix vertical monitor
+exec --no-startup-id xrandr --output HDMI-0 --scale 2x2 --panning 3840x2160
+
+
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id /home/drew/.config/i3/volume-change.sh -u &
 bindsym XF86AudioLowerVolume exec --no-startup-id /home/drew/.config/i3/volume-change.sh -d &
@@ -89,9 +93,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# press again to go back
-workspace_auto_back_and_forth yes
-
 # rofi search workspaces
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 
@@ -118,6 +119,19 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# bind workspaces to monitors
+workspace $ws1 output DP-2
+workspace $ws4 output DP-2
+workspace $ws7 output DP-2
+workspace $ws2 output DP-0
+workspace $ws5 output DP-0
+workspace $ws8 output DP-0
+workspace $ws3 output HDMI-0
+workspace $ws6 output HDMI-0
+workspace $ws9 output HDMI-0
+
+exec_always --no-startup-id i3-msg "workspace 2"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -157,7 +171,7 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id dunst
 exec --no-startup-id lxpolkit
-# exec --no-startup-id discord --start-minimized
+exec --no-startup-id discord --start-minimized
 
 # wallpaper, rgb
 exec_always --no-startup-id ~/.config/i3/theme.sh
@@ -208,3 +222,4 @@ bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show
 # start keyring
 exec --no-startup-id dbus-update-activation-environment --all
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets
+

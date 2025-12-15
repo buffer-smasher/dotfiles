@@ -179,6 +179,7 @@ function Plugin.config()
 		cmd = {
 			"clangd",
 			"--fallback-style=webkit",
+			"--compile-commands-dir=.",
 		},
 	})
 end

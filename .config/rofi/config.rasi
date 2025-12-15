@@ -1,1 +1,5 @@
-/home/drew/.cache/wal/colors-rofi-dark.rasi
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+    dpi: 192;
+}
